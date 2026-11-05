@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad — SDF Decretos</title>
+<style>
+  :root{--ink:#111b2b;--muted:#5b6b80;--line:#e3e8f0;--accent:#1d4ed8;--bg:#f6f8fb}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:16px/1.65 -apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+  main{max-width:760px;margin:0 auto;padding:44px 22px 70px;background:#fff;
+       box-shadow:0 1px 3px rgba(16,24,40,.07)}
+  h1{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+  .sub{color:var(--muted);font-size:14px;margin:0 0 28px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+  h2{font-size:17px;margin:30px 0 8px}
+  p,li{font-size:15px;color:#26364c}
+  ul{padding-left:22px;margin:8px 0}
+  li{margin:4px 0}
+  .caja{background:#f2f6ff;border:1px solid #d9e3f8;border-radius:10px;padding:14px 16px;margin:18px 0}
+  .caja p{margin:0;font-size:14.5px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  code{background:#f1f4f9;border-radius:4px;padding:1px 5px;font-size:13.5px}
+  footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<main>
+  <h1>Política de Privacidad</h1>
+  <p class="sub">Extensión «SDF Decretos — descarga y seguimiento» · Última actualización: 5 de noviembre de 2026</p>
+
+  <div class="caja">
+    <p><strong>Resumen:</strong> la extensión funciona únicamente dentro de la red interna de la
+    Ilustre Municipalidad de Cartagena. No envía información a internet, no tiene servidores propios,
+    no usa analítica ni publicidad, y no comparte datos con terceros.</p>
+  </div>
+
+  <h2>1. Quién la desarrolla</h2>
+  <p>Esta extensión fue desarrollada para uso interno de la Ilustre Municipalidad de Cartagena, en el
+  marco de las funciones de la Dirección de Administración y Finanzas. No es un producto comercial ni
+  se distribuye con fines de lucro.</p>
+  <p>Contacto para materias de privacidad: <strong>Dirección de Administración y Finanzas, Ilustre Municipalidad de Cartagena</strong></p>
+
+  <h2>2. Qué hace la extensión</h2>
+  <p>Es una herramienta de apoyo para el sistema interno <em>Seguimiento de Decreto Web</em> (SDF).
+  Permite consultar, filtrar, seguir y descargar los decretos de pago y sus documentos asociados,
+  usando la sesión que el propio usuario ya tiene abierta en el sistema.</p>
+
+  <h2>3. Qué información trata</h2>
+  <p>La extensión lee la misma información que el usuario ya ve en el SDF, a través de la sesión activa
+  de su navegador:</p>
+  <table>
+    <tr><th>Dato</th><th>Para qué</th><th>Dónde queda</th></tr>
+    <tr><td>Número de decreto, fecha, estado, ubicación</td><td>Listados, filtros y seguimiento</td><td>Memoria del navegador del usuario</td></tr>
+    <tr><td>RUT y nombre de proveedores</td><td>Identificar el pago en pantalla y en exportaciones</td><td>Memoria del navegador del usuario</td></tr>
+    <tr><td>Montos, imputación presupuestaria y registro contable</td><td>Cuadres y control</td><td>Memoria del navegador del usuario</td></tr>
+    <tr><td>Documentos y archivos PDF del repositorio municipal</td><td>Descarga solicitada por el usuario</td><td>Carpeta del equipo que el usuario elige</td></tr>
+  </table>
+  <p>La extensión <strong>no</strong> accede a contraseñas ni a credenciales: se apoya en la sesión que el
+  usuario ya inició en el sistema.</p>
+
+  <h2>4. Qué NO hace</h2>
+  <ul>
+    <li>No envía datos a servidores del desarrollador, ni a terceros, ni a internet.</li>
+    <li>No incluye analítica, rastreo, publicidad ni telemetría.</li>
+    <li>No vende ni cede información a nadie.</li>
+    <li>No usa la información para evaluar solvencia ni para actividades crediticias.</li>
+    <li>No lee páginas de otros sitios: solo actúa contra la dirección interna del sistema municipal.</li>
+  </ul>
+
+  <h2>5. Dónde se guarda la información</h2>
+  <p>Los datos consultados se guardan en la <strong>memoria local del navegador del propio usuario</strong>
+  (almacenamiento local de la extensión) por un tiempo breve, para no repetir consultas al sistema
+  municipal. Ese almacenamiento se borra al limpiar los datos del navegador o al desinstalar la extensión.
+  El desarrollador no tiene acceso a esa información.</p>
+  <p>Los archivos que el usuario descarga quedan en la carpeta de su equipo que él mismo elige.</p>
+
+  <h2>6. Permisos y su finalidad</h2>
+  <table>
+    <tr><th>Permiso</th><th>Para qué se usa</th></tr>
+    <tr><td><code>downloads</code></td><td>Guardar los decretos y sus documentos adjuntos en el equipo del usuario, respetando las carpetas que el usuario define.</td></tr>
+    <tr><td>Acceso a <code>http://199.0.0.10:8080/*</code></td><td>Consultar el sistema SDF interno, con la sesión del usuario. Sin este acceso la extensión no puede leer los listados.</td></tr>
+    <tr><td>Acceso a <code>http://199.0.0.10/*</code></td><td>Descargar los PDF desde el repositorio de firma digital municipal.</td></tr>
+  </table>
+  <p>Ambos accesos corresponden a direcciones de la red interna municipal, no a sitios de internet.</p>
+
+  <h2>7. Conservación y eliminación</h2>
+  <p>El usuario puede eliminar toda la información almacenada en cualquier momento: basta con borrar los
+  datos del sitio o desinstalar la extensión. No existe copia alguna fuera de su equipo.</p>
+
+  <h2>8. Marco normativo</h2>
+  <p>El tratamiento de datos personales se sujeta a la Ley N° 19.628 sobre Protección de la Vida Privada
+  de la República de Chile y a la normativa interna de la Municipalidad de Cartagena.</p>
+
+  <h2>9. Cambios a esta política</h2>
+  <p>Si la extensión incorpora nuevas funciones que impliquen tratar otros datos, esta política se
+  actualizará y se publicará la nueva versión en esta misma dirección.</p>
+
+  <footer>
+    Política de Privacidad · Extensión «SDF Decretos — descarga y seguimiento» ·
+    Ilustre Municipalidad de Cartagena
+  </footer>
+</main>
+</body>
+</html>
