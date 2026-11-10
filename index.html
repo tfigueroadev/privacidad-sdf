@@ -29,7 +29,7 @@
 <body>
 <main>
   <h1>Política de Privacidad</h1>
-  <p class="sub">Extensión «SDF Decretos — descarga y seguimiento» · Última actualización: 5 de noviembre de 2026</p>
+  <p class="sub">Extensión «SDF Decretos — descarga y seguimiento» · Última actualización: 10 de noviembre de 2026</p>
 
   <div class="caja">
     <p><strong>Resumen:</strong> la extensión funciona únicamente dentro de la red interna de la
@@ -76,6 +76,10 @@
   municipal. Ese almacenamiento se borra al limpiar los datos del navegador o al desinstalar la extensión.
   El desarrollador no tiene acceso a esa información.</p>
   <p>Los archivos que el usuario descarga quedan en la carpeta de su equipo que él mismo elige.</p>
+  <p>Los comprobantes de pago (egreso, transferencia y comprobante) que el usuario decide adjuntar a un
+  decreto se guardan en la <strong>carpeta compartida del servidor municipal</strong>
+  (<code>\SRV-CARTAGENA\DecretoPago\Egreso</code>), dentro de la red interna. Quedan vinculados al decreto
+  y no se envían a internet ni a terceros.</p>
 
   <h2>6. Permisos y su finalidad</h2>
   <table>
@@ -83,6 +87,11 @@
     <tr><td><code>downloads</code></td><td>Guardar los decretos y sus documentos adjuntos en el equipo del usuario, respetando las carpetas que el usuario define.</td></tr>
     <tr><td>Acceso a <code>http://199.0.0.10:8080/*</code></td><td>Consultar el sistema SDF interno, con la sesión del usuario. Sin este acceso la extensión no puede leer los listados.</td></tr>
     <tr><td>Acceso a <code>http://199.0.0.10/*</code></td><td>Descargar los PDF desde el repositorio de firma digital municipal.</td></tr>
+    <tr><td><code>nativeMessaging</code></td><td>Escribir los comprobantes de pago en la carpeta compartida del servidor municipal.
+      Chrome no permite que una extensión escriba en una ruta de red, por lo que la escritura la realiza un componente
+      local instalado por informática del municipio (<code>com.muni.egreso</code>). La extensión sólo le entrega el PDF
+      que el usuario eligió y el nombre del archivo; el componente no accede a internet y sólo acepta mensajes de esta
+      extensión.</td></tr>
   </table>
   <p>Ambos accesos corresponden a direcciones de la red interna municipal, no a sitios de internet.</p>
 
